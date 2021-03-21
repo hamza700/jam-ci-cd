@@ -9,4 +9,4 @@ export CLOUDFRONT_DISTRIBUTION_ID="${CLOUDFRONT_DISTRIBUTION_ID}"
 
 
 aws s3 sync build/ "s3://${BUCKET}"
-aws cloudfront create-invalidation -- distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --path "/*"
+aws cloudfront create-invalidation --distribution-id "${CLOUDFRONT_DISTRIBUTION_ID}" --path "/*"
